@@ -1,8 +1,8 @@
-const CACHE_NAME = 'aral-buddy-v2';
+const CACHE_NAME = 'aral-buddy-v3';
 const ASSETS = [
-  './',
-  './index.html',
-  './manifest.json'
+  '/aral-buddy/',
+  '/aral-buddy/index.html',
+  '/aral-buddy/manifest.json'
 ];
 
 self.addEventListener('install', event => {
@@ -31,7 +31,7 @@ self.addEventListener('fetch', event => {
           caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
         }
         return response;
-      }).catch(() => caches.match('./index.html'));
+      }).catch(() => caches.match('/aral-buddy/index.html'));
     })
   );
 });
