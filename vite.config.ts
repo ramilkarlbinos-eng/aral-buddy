@@ -6,6 +6,9 @@ import {VitePWA} from 'vite-plugin-pwa';
 
 export default defineConfig(() => {
   return {
+    // 1. ADDED BASE PATH HERE FOR GITHUB PAGES
+    base: '/aral-buddy/',
+
     plugins: [
       react(),
       tailwindcss(),
@@ -13,24 +16,25 @@ export default defineConfig(() => {
         registerType: 'autoUpdate',
         includeAssets: ['icon.svg'],
         manifest: {
-          id: '/',
+          // 2. UPDATED PATHS HERE TO MATCH YOUR REPOSITORY NAME
+          id: '/aral-buddy/',
           name: 'ARAL Buddy - DepEd Tutor Companion',
           short_name: 'ARAL Buddy',
           description: 'ARAL Tutor Buddy: track tutees, intervention sessions, daily time records (DTR Form 48), and weekly progress.',
           theme_color: '#173b3a',
           background_color: '#173b3a',
           display: 'standalone',
-          start_url: '/',
-          scope: '/',
+          start_url: '/aral-buddy/',
+          scope: '/aral-buddy/',
           icons: [
             {
-              src: '/icon.svg',
+              src: 'icon.svg',
               sizes: '192x192',
               type: 'image/svg+xml',
               purpose: 'any',
             },
             {
-              src: '/icon.svg',
+              src: 'icon.svg',
               sizes: '512x512',
               type: 'image/svg+xml',
               purpose: 'any',
