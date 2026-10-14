@@ -1,6 +1,0 @@
-{
-  "name": "ARAL Buddy - DepEd Tutor Companion",
-  "description": "Offline PWA for DepEd ARAL tutors to track tutees, intervention sessions, and Daily Time Records (DTR Form 48).",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
